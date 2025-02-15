@@ -18,7 +18,6 @@ public class Course extends rut.miit.models.entities.BaseEntity {
     }
     
     @ManyToOne
-    @JoinColumn(name = "teacherName", referencedColumnName = "teacherName", insertable = false, updatable = false)
     private Teacher teacher;
 
     @Column
