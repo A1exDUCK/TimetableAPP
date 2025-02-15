@@ -4,50 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/elastic/logstash/logstash.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/UniversityApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/AppSecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/BeanConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/InterceptorConfigurator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/init.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/logging/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/enums/UserRoles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AppUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AppUserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/utils/validation/UniqueUsername.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/utils/validation/UniqueUsernameValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/views/UserProfileView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pic/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="Base project created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/elastic/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +28,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "A1exDUCK"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/A1exDUCK/TimetableAPP&quot;,
+    &quot;accountId&quot;: &quot;01fab43e-41b4-4423-9621-5d51fc01d8b0&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -80,12 +56,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.docker: Compose Deployment.executor": "Run",
+    "Docker.elastic: Compose Deployment.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.UniversityApplication.executor": "Run",
+    "Spring Boot.UniversityApplication.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lehas/Desktop/University/src/main/resources/static/js",
+    "last_opened_file_path": "C:/Users/lehas/Desktop/University",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,15 +81,20 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lehas\Desktop\University" />
+      <recent name="C:\Users\lehas\Desktop\University\src\main\resources\templates" />
+      <recent name="C:\Users\lehas\Desktop\University\src\main\resources\templates\fragments" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\js" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\css" />
-      <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\pic" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\js" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources\templates" />
+      <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\js" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources" />
       <recent name="C:\Users\lehas\Desktop\University\docker\elastic" />
     </key>
@@ -131,10 +117,10 @@
       <deployment type="docker-compose.yml" />
       <method v="2" />
     </configuration>
-    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="elastic: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+          <option name="sourceFilePath" value="docker/elastic/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -142,7 +128,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.UniversityApplication" />
-        <item itemvalue="Docker.docker: Compose Deployment" />
+        <item itemvalue="Docker.elastic: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -163,8 +149,17 @@
       <option name="presentableId" value="Default" />
       <updated>1739464706402</updated>
       <workItem from="1739464707474" duration="503000" />
-      <workItem from="1739514142160" duration="8155000" />
+      <workItem from="1739514142160" duration="15176000" />
     </task>
+    <task id="LOCAL-00001" summary="Base project created">
+      <option name="closed" value="true" />
+      <created>1739538390058</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739538390058</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,15 +168,8 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/config/RedisConfig.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Base project created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base project created" />
   </component>
 </project>
