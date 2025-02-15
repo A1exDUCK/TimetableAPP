@@ -30,25 +30,25 @@ public class Lesson extends BaseEntity {
     @ManyToOne
     private Course course;
 
-    @Column
+    @Column(unique = false,nullable = true)
     public String getStudentGroup() {return studentGroup;}
     public void setStudentGroup(String studentGroup) {
         this.studentGroup = studentGroup;
     }
 
-    @Column
+    @Column(unique = false,nullable = true)
     public LocalDate getDate() {return date;}
     public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    @Column
+    @Column(unique = false,nullable = true)
     public String getSelectedPair() {return selectedPair;}
     public void setSelectedPair(String selectedPair) {
         this.selectedPair = selectedPair;
     }
 
-    @Column
+    @Column(unique = false,nullable = true,length = 4)
     public String getClassroom() {return classroom;}
     public void setClassroom(String classroom) {
         this.classroom = classroom;

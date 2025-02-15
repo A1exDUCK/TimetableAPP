@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="Added all models">
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="fix teacher link">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/init.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/init.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Lesson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739464706402</updated>
       <workItem from="1739464707474" duration="503000" />
-      <workItem from="1739514142160" duration="28025000" />
+      <workItem from="1739514142160" duration="38364000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -171,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739642307284</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix teacher link">
+      <option name="closed" value="true" />
+      <created>1739642743610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739642743610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +199,7 @@
     <MESSAGE value="Base project created" />
     <MESSAGE value="Logs are working,problem with auth,add entities" />
     <MESSAGE value="Added all models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all models" />
+    <MESSAGE value="fix teacher link" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix teacher link" />
   </component>
 </project>
