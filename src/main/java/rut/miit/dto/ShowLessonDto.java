@@ -1,19 +1,14 @@
 package rut.miit.dto;
 
-import jakarta.validation.constraints.*;
-import rut.miit.utils.validation.UniqueLessonConstraint;
-
 import java.time.LocalDate;
 
-@UniqueLessonConstraint
-public class AddLessonDto {
+public class ShowLessonDto {
     private String studentGroup;
     private LocalDate date;
     private String selectedPair;
     private String classroom;
     private String courseName;
 
-    @NotNull(message = "Дата обязательна!")
     public LocalDate getDate() {
         return date;
     }
@@ -21,7 +16,6 @@ public class AddLessonDto {
         this.date = date;
     }
 
-    @NotEmpty(message = "Номер пары обязателен!")
     public String getSelectedPair() {
         return selectedPair;
     }
@@ -29,22 +23,18 @@ public class AddLessonDto {
         this.selectedPair = selectedPair;
     }
 
-    @NotEmpty(message = "Аудитория обязательна!")
     public String getClassroom() {return classroom;}
     public void setClassroom(String classroom) {
         this.classroom = classroom;
     }
 
-    @NotEmpty(message = "Номер группы обязателен!")
     public String getStudentGroup() {return studentGroup;}
     public void setStudentGroup(String studentGroup) {
         this.studentGroup = studentGroup;
     }
 
-    @NotEmpty(message = "Имя дисциплины обязательно!")
     public String getCourseName() {return courseName;}
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
-
 }
