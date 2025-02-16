@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Constraint(validatedBy = UniqueTeacherNumberValidator.class)
 public @interface UniqueTeacherNumber {
-    String message() default "Teacher with this number already exists!";
+    String message() default "Преподаватель с таким номером уже существует!";
 
     Class<?>[] groups() default {};
 

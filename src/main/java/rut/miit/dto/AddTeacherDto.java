@@ -9,7 +9,7 @@ public class AddTeacherDto {
     private Integer teacherNumber;
     private String department;
 
-    @NotEmpty(message = "Teacher name must not be null or empty!")
+    @NotEmpty(message = "Имя преподавателя обязательно!")
     public String getTeacherName() {
         return teacherName;
     }
@@ -17,8 +17,8 @@ public class AddTeacherDto {
         this.teacherName = teacherName;
     }
 
-    @NotNull(message = "Passing score cannot be null or empty!")
-    @Size(min = 7, max = 7, message = "Teacher number must be like 123456")
+    @NotNull(message = "Номер преподавателя обязателен!")
+    @Size(min = 7, max = 7, message = "Номер преподавателя должен быть в формате 123456")
     public Integer getTeacherNumber() {
         return teacherNumber;
     }
@@ -26,7 +26,7 @@ public class AddTeacherDto {
         this.teacherNumber = teacherNumber;
     }
 
-    @NotEmpty(message = "Department cannot be null or empty!")
+    @NotEmpty(message = "Кафедра обязательна!")
     public String getDepartment() {
         return department;
     }
@@ -34,4 +34,3 @@ public class AddTeacherDto {
         this.department = department;
     }
 }
-

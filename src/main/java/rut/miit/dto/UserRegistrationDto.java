@@ -15,7 +15,7 @@ public class UserRegistrationDto {
 
     public UserRegistrationDto() {}
 
-    @NotEmpty(message = "User name cannot be null or empty!")
+    @NotEmpty(message = "Имя пользователя обязательно!")
     @Size(min = 5, max = 20)
     public String getUsername() {
         return username;
@@ -24,8 +24,8 @@ public class UserRegistrationDto {
     public void setUsername(String username) {
         this.username = username;
     }
-    @NotEmpty(message = "Full name cannot be null or empty!")
-    @Size(min = 5, max = 20)
+    @NotEmpty(message = "ФИО обязательно!")
+    @Size(min = 5, max = 50)
     public String getFullname() {
         return fullname;
     }
@@ -33,7 +33,7 @@ public class UserRegistrationDto {
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
-    @NotEmpty(message = "Email cannot be null or empty!")
+    @NotEmpty(message = "Email обязателен!")
     @Email
     public String getEmail() {
         return email;
@@ -43,7 +43,7 @@ public class UserRegistrationDto {
         this.email = email;
     }
 
-    @NotEmpty(message = "Password cannot be null or empty!")
+    @NotEmpty(message = "Пароль обязателен!")
     @Size(min = 5, max = 20)
     public String getPassword() {
         return password;
@@ -52,7 +52,7 @@ public class UserRegistrationDto {
         this.password = password;
     }
 
-    @NotEmpty(message = "Confirm Password cannot be null or empty!")
+    @NotEmpty(message = "Подтверждение пароля обязательно!")
     @Size(min = 5, max = 20)
     public String getConfirmPassword() {
         return confirmPassword;
