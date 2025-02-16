@@ -3,6 +3,7 @@ package rut.miit.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import rut.miit.models.entities.Course;
@@ -27,6 +28,10 @@ public interface LessonRepository extends JpaRepository<Lesson, String> {
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM Lesson WHERE date=:date AND selectedPair=:selectedPair")
-    void deleteByDateAndSelectedPair(LocalDate date, String selectedPair);
+    @Query("DELETE FROM Lesson WHERE date = :date AND selectedPair = :selectedPair AND classroom = :classroom")
+    void deleteByDateAndSelectedPairAndClassroom(
+            @Param("date") LocalDate date,
+            @Param("selectedPair") String selectedPair,
+            @Param("classroom") String classroom
+    );
 }
