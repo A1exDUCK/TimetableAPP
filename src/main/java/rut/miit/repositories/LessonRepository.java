@@ -14,10 +14,9 @@ import java.util.Optional;
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson, String> {
 
-    Optional<Lesson> findByCourse(Course courseName);
     Optional<Lesson> findByDate(LocalDate date);
     Optional<Lesson> findByClassroom(String Classroom);
-    Optional<Lesson> findBySelectedPair(String  SelectedPair);
+    Optional<Lesson> findBySelectedPair(String SelectedPair);
 
     @Modifying
     @Transactional

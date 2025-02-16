@@ -10,7 +10,7 @@ import java.util.Set;
 public class Teacher extends rut.miit.models.entities.BaseEntity {
 
     private String teacherName;
-    private Integer teacherNumber;
+    private String teacherNumber;
     private String department;
 
     private Set<Course> courses;
@@ -28,8 +28,8 @@ public class Teacher extends rut.miit.models.entities.BaseEntity {
 }
 
     @Column(unique = true,nullable = false,length = 7)
-    public Integer getTeacherNumber() {return teacherNumber;}
-    public void setTeacherNumber(Integer teacherNumber) {this.teacherNumber = teacherNumber;}
+    public String getTeacherNumber() {return teacherNumber;}
+    public void setTeacherNumber(String teacherNumber) {this.teacherNumber = teacherNumber;}
 
     @Column(unique = false,nullable = true)
     public String getDepartment() {return department;}
