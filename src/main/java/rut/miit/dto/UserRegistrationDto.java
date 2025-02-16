@@ -48,10 +48,10 @@ public class UserRegistrationDto {
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
+
     @NotEmpty(message = "Confirm Password cannot be null or empty!")
     @Size(min = 5, max = 20)
     public String getConfirmPassword() {
@@ -66,7 +66,7 @@ public class UserRegistrationDto {
     public String toString() {
         return "UserRegistrationDTO{" +
                 "username='" + username + '\'' +
-                ", fullName='" + fullname + '\'' +
+                ", fullname='" + fullname + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +

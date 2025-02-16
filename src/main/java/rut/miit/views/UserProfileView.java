@@ -5,16 +5,16 @@ public class UserProfileView {
 
     private String email;
 
-    private String fullName;
+    private String fullname;
 
 
     public UserProfileView() {
     }
 
-    public UserProfileView(String username, String email, String fullName ) {
+    public UserProfileView(String username, String email, String fullname ) {
         this.username = username;
         this.email = email;
-        this.fullName = fullName;
+        this.fullname = fullname;
 
     }
 
@@ -35,11 +35,11 @@ public class UserProfileView {
     }
 
     public String getFullName() {
-        return fullName;
+        return fullname;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFullName(String fullname) {
+        this.fullname = fullname;
     }
 
 }
