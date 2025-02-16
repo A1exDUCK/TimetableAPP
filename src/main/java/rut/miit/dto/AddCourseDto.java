@@ -6,6 +6,7 @@ import rut.miit.utils.validation.UniqueCourseName;
 @UniqueCourseName
 public class AddCourseDto {
     private String courseName;
+    private String teacherName;
 
     @NotBlank(message = "Имя дисциплины обязательно!")
     public String getCourseName() {
@@ -13,6 +14,14 @@ public class AddCourseDto {
     }
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+
+    @NotBlank(message = "Имя преподавателя обязательно!")
+    public String getTeacherName() {
+        return teacherName;
+    }
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 
 }

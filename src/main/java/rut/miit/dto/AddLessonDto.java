@@ -7,37 +7,44 @@ import java.time.LocalDate;
 
 @UniqueLessonConstraint
 public class AddLessonDto {
+    private String studentGroup;
     private LocalDate date;
     private String selectedPair;
     private String classroom;
+    private String courseName;
 
-    // Геттеры и сеттеры с базовыми ограничениями
     @NotNull(message = "Дата обязательна!")
     public LocalDate getDate() {
         return date;
+    }
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     @NotBlank(message = "Номер пары обязателен!")
     public String getSelectedPair() {
         return selectedPair;
     }
-
-    @NotBlank(message = "Аудитория обязательна!")
-    @Size(max = 4, message = "Номер аудитории не длиннее 4 символов!")
-    public String getClassroom() {
-        return classroom;
-    }
-
-    // Сеттеры
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
     public void setSelectedPair(String selectedPair) {
         this.selectedPair = selectedPair;
     }
 
+    @NotBlank(message = "Аудитория обязательна!")
+    public String getClassroom() {return classroom;}
     public void setClassroom(String classroom) {
         this.classroom = classroom;
     }
+
+    @NotBlank(message = "Номер группы обязателен!")
+    public String getStudentGroup() {return studentGroup;}
+    public void setStudentGroup(String studentGroup) {
+        this.studentGroup = studentGroup;
+    }
+
+    @NotBlank(message = "Имя дисциплины обязательно!")
+    public String getCourseName() {return courseName;}
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
 }
