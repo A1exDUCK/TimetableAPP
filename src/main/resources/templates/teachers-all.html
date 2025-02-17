@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head}"/>
+<body class="d-flex flex-column h-100">
+<div th:replace="~{fragments/navbar}">Navbar</div>
+<main class="flex-shrink-0">
+    <div class="container my-5">
+        <h2 class="text-center text-dark">Зарегистрированные Преподаватели</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                <tr>
+                    <th>ФИО Преподавателя</th>
+                    <th>Табельный номер</th>
+                    <th>Кафедра</th>
+                    <th>Действия</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="t : ${teachersInfos}">
+                    <td th:text="${t.teacherName}">ФИО Преподавателя</td>
+                    <td th:text="${t.teacherNumber}">Табельный номер</td>
+                    <td th:text="${t.department}">Кафедра</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm"
+                           th:href="@{/teachers/teacher-delete/{teacher-number}(teacher-number=${t.teacherNumber})}">
+                            Исключить
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<footer th:replace="~{fragments/footer}"/>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

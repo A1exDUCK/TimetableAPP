@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head"/>
+<body class="d-flex flex-column h-100">
+<div th:replace="fragments/navbar">Navbar</div>
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="jumbotron text-center rounded col-md-8 align-self-center pt-5">
+                <div class="justify-content-center">
+                    <h1>Добавление нового Преподавателя</h1>
+                </div>
+                <form th:action="@{/teachers/add}"
+                      th:method="post"
+                      th:object="${teacherModel}"
+                      class="m-md-auto w-50 pb-3">
+
+                    <!-- Имя -->
+                    <div class="mb-3">
+                        <label class="form-label" for="teacherName">Имя Преподавателя</label>
+                        <input th:field="*{teacherName}"
+                               th:errorclass="is-invalid"
+                               type="text" class="form-control text-center" id="teacherName"
+                               name="teacherName" required/>
+                        <small th:if="${#fields.hasErrors('teacherName')}" th:errors="*{teacherName}" class="text-danger"></small>
+                    </div>
+
+                    <!-- Табельный номер -->
+                    <div class="mb-3">
+                        <label class="form-label" for="teacherNumber">Табельный номер</label>
+                        <input th:field="*{teacherNumber}"
+                               th:errorclass="is-invalid"
+                               type="text" class="form-control text-center" id="teacherNumber"
+                               name="teacherNumber" required/>
+                        <small th:if="${#fields.hasErrors('teacherNumber')}" th:errors="*{teacherNumber}" class="text-danger"></small>
+                    </div>
+
+                    <!-- Кафедра -->
+                    <div class="mb-3">
+                        <label class="form-label" for="department">Кафедра</label>
+                        <input th:field="*{department}"
+                               th:errorclass="is-invalid"
+                               type="text" class="form-control text-center" id="department"
+                               name="department" required/>
+                        <small th:if="${#fields.hasErrors('department')}" th:errors="*{department}" class="text-danger"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary">Добавить Преподавателя</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/footer"/>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

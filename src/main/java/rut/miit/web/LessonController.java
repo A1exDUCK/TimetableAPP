@@ -63,6 +63,6 @@ public class LessonController {
             @PathVariable("classroom") String classroom
     ) {
         lessonService.removeLesson(date, selectedPair, classroom);
-        return "redirect:/lessons/all"; // Перенаправление на список уроков
+        return "redirect:/lessons/all";
     }
 }

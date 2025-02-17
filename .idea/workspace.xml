@@ -4,19 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="add lesson service,controller">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" afterDir="false" />
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="add course service,controller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/TeacherController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher-add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teachers-all.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddTeacherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddTeacherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowTeacherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowTeacherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/TeacherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/TeacherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +177,7 @@
       <workItem from="1739514142160" duration="52962000" />
       <workItem from="1739730730337" duration="339000" />
       <workItem from="1739731120402" duration="664000" />
-      <workItem from="1739731820867" duration="21667000" />
+      <workItem from="1739731820867" duration="33836000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -271,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739748720806</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add course service,controller">
+      <option name="closed" value="true" />
+      <created>1739755399502</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739755399502</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +314,37 @@
     <MESSAGE value="fix all Dto's" />
     <MESSAGE value="Add all ShowDto's" />
     <MESSAGE value="add lesson service,controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add lesson service,controller" />
+    <MESSAGE value="add course service,controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="add course service,controller" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/web/TeacherController.java</url>
+          <line>50</line>
+          <properties class="rut.miit.web.TeacherController" method="showAllTeacher">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherService.java</url>
+          <line>10</line>
+          <properties class="rut.miit.services.TeacherService" method="allTeachers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[0]).getKey()" custom="org.springframework.validation.support.BindingAwareModelMap,java.util.LinkedHashMap.Entry" />
+        <watch expression="((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[0]).getKey()" custom="org.springframework.validation.support.BindingAwareModelMap,java.util.LinkedHashMap.Entry" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

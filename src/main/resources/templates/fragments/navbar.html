@@ -15,7 +15,15 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li sec:authorize="hasRole('ADMIN')">
-                            <a class="dropdown-item" href="/lessons/add">Добавить урок</a>
+                            <a class="dropdown-item" href="/teachers/add">Добавить Преподавателя</a>
+                        </li>
+
+                        <li sec:authorize="hasRole('ADMIN')">
+                            <a class="dropdown-item" href="/courses/add">Добавить Дисциплину</a>
+                        </li>
+
+                        <li sec:authorize="hasRole('ADMIN')">
+                            <a class="dropdown-item" href="/lessons/add">Добавить Занятие</a>
                         </li>
                     </ul>
                 </li>
@@ -28,7 +36,13 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="/lessons/all">Расписание уроков</a>
+                            <a class="dropdown-item" href="/teachers/all">Cписок Преподавателей</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/courses/all">Список Дисциплин</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/lessons/all">Расписание Занятий</a>
                         </li>
                     </ul>
                 </li>

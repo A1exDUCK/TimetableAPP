@@ -2,7 +2,6 @@ package rut.miit.dto;
 
 import jakarta.validation.constraints.*;
 import rut.miit.utils.validation.UniqueLessonConstraint;
-
 import java.time.LocalDate;
 
 @UniqueLessonConstraint

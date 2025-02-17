@@ -9,7 +9,7 @@
             <div class="col-md-2"></div>
             <div class="jumbotron text-center rounded col-md-8 align-self-center pt-5">
                 <div class="justify-content-center">
-                    <h1>Добавление нового урока</h1>
+                    <h1>Добавление нового занятия</h1>
                 </div>
                 <form th:action="@{/lessons/add}"
                       th:method="post"
@@ -56,10 +56,10 @@
                         <small th:if="${#fields.hasErrors('studentGroup')}" th:errors="*{studentGroup}" class="text-danger"></small>
                     </div>
 
-                    <!-- Курс -->
+                    <!-- Дисциплина -->
                     <div class="mb-3">
-                        <label class="form-label" for="course">Курс</label>
-                        <select th:field="*{course}"
+                        <label class="form-label" for="course">Дисциплина</label>
+                        <select th:field="*{courseName}"
                                 class="form-select text-center"
                                 id="course"
                                 name="course" required>
@@ -68,25 +68,25 @@
                                     th:value="${course.id}"
                                     th:text="${course.name}"></option>
                         </select>
-                        <small th:if="${#fields.hasErrors('course')}" th:errors="*{course}" class="text-danger"></small>
+                        <small th:if="${#fields.hasErrors('course')}" th:errors="*{courseName}" class="text-danger"></small>
                     </div>
 
                     <!-- Преподаватель -->
                     <div class="mb-3">
-                        <label class="form-label" for="course">Преподаватель</label>
-                        <select th:field="*{teacher}"
+                        <label class="form-label" for="teacher">Преподаватель</label>
+                        <select th:field="*{teacherName}"
                                 class="form-select text-center"
                                 id="teacher"
-                                name="course" required>
+                                name="teacher" required>
                             <option value="">Выберите преподавателя</option>
                             <option th:each="teacher : ${teachers}"
                                     th:value="${teacher.id}"
                                     th:text="${teacher.name}"></option>
                         </select>
-                        <small th:if="${#fields.hasErrors('teacher')}" th:errors="*{teacher}" class="text-danger"></small>
+                        <small th:if="${#fields.hasErrors('teacher')}" th:errors="*{teacherName}" class="text-danger"></small>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">Добавить урок</button>
+                    <button type="submit" class="btn btn-secondary">Добавить занятие</button>
                 </form>
             </div>
         </div>

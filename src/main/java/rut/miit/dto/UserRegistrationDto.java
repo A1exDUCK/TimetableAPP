@@ -8,7 +8,6 @@ public class UserRegistrationDto {
     @UniqueUsername
     private String username;
     private String fullname;
-    // Делайте проверку на уникальность
     private String email;
     private String password;
     private String confirmPassword;

@@ -21,27 +21,40 @@
                         <label class="form-label" for="date">Название Дисциплины</label>
                         <input th:field="*{courseName}"
                                th:errorclass="is-invalid"
-                               type="date" class="form-control text-center" id="date"
-                               name="date" required/>
+                               type="text" class="form-control text-center" id="date"
+                               name="test" required/>
                         <small th:if="${#fields.hasErrors('courseName')}" th:errors="*{courseName}" class="text-danger"></small>
                     </div>
 
                     <!-- Преподаватель -->
                     <div class="mb-3">
-                        <label class="form-label" for="course">Имя преподавателя</label>
+                        <label class="form-label" for="teacher">Имя преподавателя</label>
                         <select th:field="*{teacherName}"
                                 class="form-select text-center"
-                                id="course"
-                                name="course" required>
-                            <option value="">Выберите курс</option>
+                                id="teacher"
+                                name="teacher" required>
+                            <option value="">Выберите преподавателя</option>
+                            <option th:each="t : ${teachersInfos}"
+                                    th:value="${t.id}"
+                                    th:text="${teacher.name}"></option>
+                        </select>
+                        <small th:if="${#fields.hasErrors('teacherName')}" th:errors="*{teacherName}" class="text-danger"></small>
+                    </div><!-- Преподаватель -->
+                    <div class="mb-3">
+                        <label class="form-label" for="teacher">Имя преподавателя</label>
+                        <select th:field="*{teacherName}"
+                                class="form-select text-center"
+                                id="teacher"
+                                name="teacher" required>
+                            <option value="">Выберите преподавателя</option>
                             <option th:each="teacher : ${teachers}"
                                     th:value="${teacher.id}"
                                     th:text="${teacher.name}"></option>
                         </select>
-                        <small th:if="${#fields.hasErrors('teacher')}" th:errors="*{teacher}" class="text-danger"></small>
+                        <small th:if="${#fields.hasErrors('teacherName')}" th:errors="*{teacherName}" class="text-danger"></small>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">Добавить урок</button>
+                    <button type="submit" class="btn btn-secondary">Добавить дисциплину</button>
                 </form>
             </div>
         </div>

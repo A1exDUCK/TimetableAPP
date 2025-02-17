@@ -1,7 +1,5 @@
 package rut.miit.web;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -11,10 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import rut.miit.dto.AddCourseDto;
 import rut.miit.services.CourseService;
-
-
-import java.time.LocalDate;
-
 
 @Controller
 @RequestMapping("/courses")
@@ -61,6 +55,6 @@ public class CourseController {
     public String deleteCourse(
             @PathVariable("course-name") String courseName) {
         courseService.removeCourse(courseName);
-        return "redirect:/courses/all"; // Перенаправление на список уроков
+        return "redirect:/courses/all";
     }
 }

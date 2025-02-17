@@ -6,11 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import rut.miit.models.entities.Course;
 import rut.miit.models.entities.Lesson;
-
 import java.time.LocalDate;
-import java.util.Optional;
 
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson, String> {

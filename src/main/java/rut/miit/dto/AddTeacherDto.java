@@ -7,17 +7,16 @@ public class AddTeacherDto {
 
     private String teacherName;
     @UniqueTeacherNumber
-    private Integer teacherNumber;
+    private String teacherNumber;
     private String department;
 
     @NotEmpty(message = "Имя преподавателя обязательно!")
     public String getTeacherName() {return teacherName;}
     public void setTeacherName(String teacherName) {this.teacherName = teacherName;}
 
-    @NotNull(message = "Номер преподавателя обязателен!")
-    @Size(min = 7, max = 7, message = "Номер преподавателя должен быть в формате 123456")
-    public Integer getTeacherNumber() {return teacherNumber;}
-    public void setTeacherNumber(Integer teacherNumber) {this.teacherNumber = teacherNumber;}
+    @NotEmpty(message = "Номер преподавателя обязателен!")
+    public String getTeacherNumber() {return teacherNumber;}
+    public void setTeacherNumber(String teacherNumber) {this.teacherNumber = teacherNumber;}
 
     @NotEmpty(message = "Кафедра обязательна!")
     public String getDepartment() {return department;}
