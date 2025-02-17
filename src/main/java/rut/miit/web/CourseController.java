@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import rut.miit.dto.AddCourseDto;
 import rut.miit.services.CourseService;
+import rut.miit.services.TeacherService;
 
 @Controller
 @RequestMapping("/courses")
@@ -16,13 +17,17 @@ public class CourseController {
 
     @Autowired
     private final CourseService courseService;
+    @Autowired
+    private final TeacherService teacherService;
 
-    public CourseController(CourseService courseService) {
+    public CourseController(CourseService courseService, TeacherService teacherService) {
         this.courseService = courseService;
+        this.teacherService = teacherService;
     }
 
     @GetMapping("/add")
-    public String addCourse() {
+    public String addCourse(Model model) {
+        model.addAttribute("availableTeachers", teacherService.allTeachers());
         return "course-add";
     }
 

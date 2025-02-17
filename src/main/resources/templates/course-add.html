@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head"/>
+<head th:replace="~{fragments/head}"/>
 <body class="d-flex flex-column h-100">
-<div th:replace="fragments/navbar">Navbar</div>
+<div th:replace="~{fragments/navbar}">Navbar</div>
 <main class="flex-shrink-0">
     <div class="container">
         <div class="row">
@@ -15,17 +15,15 @@
                       th:method="post"
                       th:object="${courseModel}"
                       class="m-md-auto w-50 pb-3">
-
                     <!-- Название -->
                     <div class="mb-3">
-                        <label class="form-label" for="date">Название Дисциплины</label>
+                        <label class="form-label" for="courseName">Название Дисциплины</label>
                         <input th:field="*{courseName}"
                                th:errorclass="is-invalid"
-                               type="text" class="form-control text-center" id="date"
-                               name="test" required/>
+                               type="text" class="form-control text-center" id="courseName"
+                               name="courseName" required/>
                         <small th:if="${#fields.hasErrors('courseName')}" th:errors="*{courseName}" class="text-danger"></small>
                     </div>
-
                     <!-- Преподаватель -->
                     <div class="mb-3">
                         <label class="form-label" for="teacher">Имя преподавателя</label>
@@ -34,33 +32,20 @@
                                 id="teacher"
                                 name="teacher" required>
                             <option value="">Выберите преподавателя</option>
-                            <option th:each="t : ${teachersInfos}"
-                                    th:value="${t.id}"
-                                    th:text="${teacher.name}"></option>
-                        </select>
-                        <small th:if="${#fields.hasErrors('teacherName')}" th:errors="*{teacherName}" class="text-danger"></small>
-                    </div><!-- Преподаватель -->
-                    <div class="mb-3">
-                        <label class="form-label" for="teacher">Имя преподавателя</label>
-                        <select th:field="*{teacherName}"
-                                class="form-select text-center"
-                                id="teacher"
-                                name="teacher" required>
-                            <option value="">Выберите преподавателя</option>
-                            <option th:each="teacher : ${teachers}"
-                                    th:value="${teacher.id}"
-                                    th:text="${teacher.name}"></option>
+                            <option th:each="t : ${availableTeachers}"
+                                    th:value="${t.teacherNumber}"
+                                    th:text="${t.teacherName}">Имя преподавателя
+                            </option>
                         </select>
                         <small th:if="${#fields.hasErrors('teacherName')}" th:errors="*{teacherName}" class="text-danger"></small>
                     </div>
-
                     <button type="submit" class="btn btn-secondary">Добавить дисциплину</button>
                 </form>
             </div>
         </div>
     </div>
 </main>
-<footer th:replace="fragments/footer"/>
+<footer th:replace="~{fragments/footer}"/>
 <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

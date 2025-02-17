@@ -12,9 +12,10 @@ import java.util.Optional;
 public interface TeacherRepository extends JpaRepository<Teacher, String> {
 
     Optional<Teacher> findByTeacherNumber(String teacherNumber);
+    Optional<Teacher> findByTeacherName(String teacherNumber);
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM Teacher WHERE teacherName=:teacherNumber")
+    @Query("DELETE FROM Teacher WHERE teacherNumber=:teacherNumber")
     void deleteByTeacherNumber(String teacherNumber);
 }

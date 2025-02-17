@@ -13,11 +13,6 @@
         <p class="fs-5"><strong>Имя пользователя:</strong> <span th:text="*{username}"></span></p>
         <p class="fs-5"><strong>Роль:</strong> <span sec:authentication="principal.authorities"></span></p>
       </div>
-      <div class="col-md-6 text-center">
-        <img sec:authorize="hasRole('ADMIN')" src="/pic/CoffeeOwl.png" class="img-fluid rounded" alt="Администратор" style="max-height: 350px;">
-        <img sec:authorize="hasRole('MODERATOR')" src="/pic/cat.png" class="img-fluid rounded" alt="Модератор" style="max-height: 350px;">
-        <img sec:authorize="hasRole('USER')" src="/pic/raccoon.png" class="img-fluid rounded" alt="Пользователь" style="max-height: 350px;">
-      </div>
     </div>
   </div>
 </main>

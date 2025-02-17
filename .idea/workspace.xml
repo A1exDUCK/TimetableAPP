@@ -5,30 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="add course service,controller">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/TeacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher-add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teachers-all.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddTeacherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddTeacherDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowTeacherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowTeacherDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddCourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddCourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/logging/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/logging/LoggingUnite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/TeacherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/TeacherRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/utils/validation/UniqueCourseName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/utils/validation/UniqueCourseName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pic/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/pic/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,36 +62,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker: Compose Deployment.executor": "Run",
-    "Docker.elastic: Compose Deployment.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.UniversityApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lehas/Desktop/University",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/lehas/Desktop/University/src/main/java/rut/miit/Main.java",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.elastic: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.UniversityApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lehas/Desktop/University&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lehas/Desktop/University/src/main/java/rut/miit/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -116,6 +107,7 @@
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\pic" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources\templates" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources\static\js" />
       <recent name="C:\Users\lehas\Desktop\University\src\main\resources" />
@@ -178,6 +170,7 @@
       <workItem from="1739730730337" duration="339000" />
       <workItem from="1739731120402" duration="664000" />
       <workItem from="1739731820867" duration="33836000" />
+      <workItem from="1739772159630" duration="9776000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -328,15 +321,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherService.java</url>
-          <line>10</line>
-          <properties class="rut.miit.services.TeacherService" method="allTeachers">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

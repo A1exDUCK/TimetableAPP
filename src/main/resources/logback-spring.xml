@@ -20,7 +20,7 @@
         <appender-ref ref="LOGSTASH" />
     </logger>
 
-    <logger name="rut.miit.logging.LoggingAspect" level="DEBUG" additivity="false">
+    <logger name="rut.miit.logging.LoggingUnite" level="DEBUG" additivity="false">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="LOGSTASH" />
     </logger>

@@ -12,9 +12,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 @Aspect
 @Component
-public class LoggingAspect {
+public class LoggingUnite {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoggingUnite.class);
 
     @Pointcut("within(@org.springframework.web.bind.annotation.RestController *) || within(rut.miit.web..*)")
     public void controller() {}
