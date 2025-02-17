@@ -12,6 +12,7 @@ public class AddLessonDto {
     private String selectedPair;
     private String classroom;
     private String courseName;
+    private String teacherName;
 
     @NotNull(message = "Дата обязательна!")
     public LocalDate getDate() {
@@ -46,5 +47,12 @@ public class AddLessonDto {
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
+
+    @NotEmpty(message = "Имя преподавателя обязательно!")
+    public String getTeacherName() {return teacherName;}
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
 
 }

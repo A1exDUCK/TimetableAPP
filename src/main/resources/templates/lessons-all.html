@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/head"/>
+<body class="d-flex flex-column h-100">
+<div th:replace="fragments/navbar"></div>
+<main class="flex-shrink-0">
+    <div class="container my-5">
+        <h2 class="text-center text-dark">Запланированные уроки</h2>
+        <div class="row">
+            <div th:each="lesson : ${lessonsInfo}" class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="'Дата: ' + ${#dates.format(lesson.date, 'dd.MM.yyyy')}"></h5>
+                        <p class="card-text" th:text="'Пара: ' + ${lesson.selectedPair}"></p>
+                        <p class="card-text" th:text="'Аудитория: ' + ${lesson.classroom}"></p>
+                        <p class="card-text" th:text="'Группа: ' + ${lesson.studentGroup}"></p>
+                        <p class="card-text" th:text="'Курс: ' + ${lesson.course.name}"></p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a th:href="@{/lessons/lesson-delete/{date}/{pair}/{room}(date=${lesson.date}, pair=${lesson.selectedPair}, room=${lesson.classroom})}"
+                                   class="btn btn-sm btn-danger"
+                                   sec:authorize="hasAnyRole('ADMIN', 'MODERATOR')">
+                                    Удалить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/footer"></footer>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head"/>
+<body class="d-flex flex-column h-100">
+<div th:replace="fragments/navbar">Navbar</div>
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="jumbotron text-center rounded col-md-8 align-self-center pt-5">
+                <div class="justify-content-center">
+                    <h1>Добавление нового урока</h1>
+                </div>
+                <form th:action="@{/courses/add}"
+                      th:method="post"
+                      th:object="${courseModel}"
+                      class="m-md-auto w-50 pb-3">
+
+                    <!-- Название -->
+                    <div class="mb-3">
+                        <label class="form-label" for="date">Название Дисциплины</label>
+                        <input th:field="*{courseName}"
+                               th:errorclass="is-invalid"
+                               type="date" class="form-control text-center" id="date"
+                               name="date" required/>
+                        <small th:if="${#fields.hasErrors('courseName')}" th:errors="*{courseName}" class="text-danger"></small>
+                    </div>
+
+                    <!-- Преподаватель -->
+                    <div class="mb-3">
+                        <label class="form-label" for="course">Имя преподавателя</label>
+                        <select th:field="*{teacherName}"
+                                class="form-select text-center"
+                                id="course"
+                                name="course" required>
+                            <option value="">Выберите курс</option>
+                            <option th:each="teacher : ${teachers}"
+                                    th:value="${teacher.id}"
+                                    th:text="${teacher.name}"></option>
+                        </select>
+                        <small th:if="${#fields.hasErrors('teacher')}" th:errors="*{teacher}" class="text-danger"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary">Добавить урок</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/footer"/>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

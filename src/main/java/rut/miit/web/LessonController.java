@@ -16,7 +16,7 @@ import java.time.LocalDate;
 
 
 @Controller
-@RequestMapping("/specialities")
+@RequestMapping("/lessons")
 public class LessonController {
 
     @Autowired
