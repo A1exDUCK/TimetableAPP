@@ -4,26 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="fix 500 error on course,but teacherName is null">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pic/MIIT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pic/img_user.png" afterDir="false" />
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="fix view of navbar,footer on all html,courses all now working,but delete by courseName">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddCourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddCourseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowCourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowCourseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/utils/validation/UniqueCourseName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/utils/validation/UniqueCourseNameValidator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/courses-all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teachers-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teachers-all.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +166,7 @@
       <workItem from="1739772159630" duration="22581000" />
       <workItem from="1739896382728" duration="4717000" />
       <workItem from="1739959553627" duration="3303000" />
-      <workItem from="1740226500648" duration="6879000" />
+      <workItem from="1740226500648" duration="16877000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -299,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739785420157</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix view of navbar,footer on all html,courses all now working,but delete by courseName">
+      <option name="closed" value="true" />
+      <created>1740235359588</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1740235359588</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,9 +321,23 @@
     <MESSAGE value="add lesson service,controller" />
     <MESSAGE value="add course service,controller" />
     <MESSAGE value="fix 500 error on course,but teacherName is null" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 500 error on course,but teacherName is null" />
+    <MESSAGE value="fix view of navbar,footer on all html,courses all now working,but delete by courseName" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix view of navbar,footer on all html,courses all now working,but delete by courseName" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java</url>
+          <line>13</line>
+          <properties class="rut.miit.services.CourseService" method="removeCourse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[0]).getKey()" custom="org.springframework.validation.support.BindingAwareModelMap,java.util.LinkedHashMap.Entry" />

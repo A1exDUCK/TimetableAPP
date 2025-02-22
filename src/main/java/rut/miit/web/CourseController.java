@@ -8,8 +8,11 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import rut.miit.dto.AddCourseDto;
+import rut.miit.dto.ShowCourseDto;
 import rut.miit.services.CourseService;
 import rut.miit.services.TeacherService;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/courses")
@@ -52,7 +55,9 @@ public class CourseController {
 
     @GetMapping("/all")
     public String showAllCourses(Model model) {
-        model.addAttribute("coursesInfos", courseService.allCourses());
+        List<ShowCourseDto> courses = courseService.allCourses();
+        System.out.println("Courses sent to view: " + courses.size());
+        model.addAttribute("coursesInfos", courses);
         return "courses-all";
     }
 

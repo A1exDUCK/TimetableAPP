@@ -21,13 +21,18 @@
                     <td th:text="${c.courseName}">Название Дисциплины</td>
                     <td th:text="${c.teacherName}">Имя Преподавателя</td>
                     <td>
-                        <a class="btn btn-danger btn-sm"
-                           th:href="@{/courses/course-delete/{course-name}(course-name=${c.courseName})}"
-                           sec:authorize="hasAnyRole('ADMIN', 'MODERATOR')">
+                        <a th:href="@{/courses/course-delete/{id}(id=${c.id})}"
+                           class="btn btn-sm btn-danger"
+                           sec:authorize="hasAnyRole('ADMIN')">
                             Удалить
                         </a>
                     </td>
                 </tr>
+
+                <tr th:if="${#lists.isEmpty(coursesInfos)}" class="table-warning">
+                    <td colspan="3" class="text-center">Нет доступных дисциплин</td>
+                </tr>
+
                 </tbody>
             </table>
         </div>

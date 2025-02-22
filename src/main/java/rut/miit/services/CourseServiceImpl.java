@@ -37,20 +37,26 @@ public class CourseServiceImpl implements CourseService {
         course.setTeacher(teacherRepository.findByTeacherName(addCourseDto.getTeacherName()).orElse(null));
         courseRepository.saveAndFlush(course);
     }
-       @Cacheable("courses")
-        public List<ShowCourseDto> allCourses() {
-            return courseRepository.findAll().stream().map(course -> mapper.map(course, ShowCourseDto.class))
-                    .collect(Collectors.toList());
-        }
-        @Override
-        public List<ShowCourseDto> allTeacherCourses(String teacherName) {
-            return courseRepository.findAllWhatTeacherTeaches(teacherName).stream().map(course -> mapper.map(course, ShowCourseDto.class))
-                    .collect(Collectors.toList());
-        }
+    @Cacheable("courses")
+    public List<ShowCourseDto> allCourses() {
+        return courseRepository.findAll().stream()
+                .map(course -> {
+                    ShowCourseDto dto = mapper.map(course, ShowCourseDto.class);
+                    // Добавляем проверку на null для преподавателя
+                    if (course.getTeacher() != null) {
+                        dto.setTeacherName(course.getTeacher().getTeacherName());
+                    } else {
+                        dto.setTeacherName("Не указан");
+                    }
+                    dto.setId(course.getId());
+                    return dto;
+                })
+                .collect(Collectors.toList());
+    }
 
-       @CacheEvict(cacheNames = "courses", allEntries = true)
-        public void removeCourse(String courseName) {
-            courseRepository.deleteByCourseName(courseName);
-        }
+    @CacheEvict(cacheNames = "courses", allEntries = true)
+    public void removeCourse(String id) {
+        courseRepository.deleteById(id);
+    }
 
     }

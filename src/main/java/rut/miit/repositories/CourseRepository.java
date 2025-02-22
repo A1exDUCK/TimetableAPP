@@ -13,27 +13,12 @@ import java.util.Optional;
 
 @Repository
 public interface CourseRepository extends JpaRepository<Course, String> {
-    Optional<Course> findByCourseName(String CourseName);
+    Optional<Course> findById(String id);
 
-    @Query("SELECT с FROM Course с JOIN с.teacher t WHERE t.teacherName=:teacherName ORDER BY t.teacherName ASC")
-    List<Course> findAllWhatTeacherTeaches(String teacherName);
-
-    @Query("SELECT c FROM Course c WHERE c.courseName = :courseName AND c.teacher.teacherName = :teacherName")
-    Optional<Course> findByCourseNameAndTeacherName(
-            @Param("courseName") String courseName,
-            @Param("teacherName") String teacherName
-    );
-
-    @Query("SELECT c FROM Course c WHERE c.courseName = :courseName AND c.teacher.teacherName = :teacherName AND c.id != :id")
-    Optional<Course> findByCourseNameAndTeacherNameExcludingId(
-            @Param("courseName") String courseName,
-            @Param("teacherName") String teacherName,
-            @Param("id") String id
-    );
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM Course WHERE courseName=:courseName")
-    void deleteByCourseName(String courseName);
+    @Query("DELETE FROM Course c WHERE c.id = :id")
+    void deleteById(@Param("id") String id);
 
 }

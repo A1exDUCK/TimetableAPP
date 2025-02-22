@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="~{fragments/head}"/>
 <body class="d-flex flex-column h-100">
 <div th:replace="~{fragments/navbar}">Navbar</div>
@@ -22,12 +23,18 @@
                     <td th:text="${t.teacherNumber}">Табельный номер</td>
                     <td th:text="${t.department}">Кафедра</td>
                     <td>
-                        <a class="btn btn-danger btn-sm"
-                           th:href="@{/teachers/teacher-delete/{teacher-number}(teacher-number=${t.teacherNumber})}">
+                        <a th:href="@{/teachers/teacher-delete/{teacher-number}(teacher-number=${t.teacherNumber})}"
+                           class="btn btn-danger btn-sm"
+                           sec:authorize="hasRole('ADMIN')">
                             Исключить
                         </a>
                     </td>
                 </tr>
+
+                <tr th:if="${#lists.isEmpty(teachersInfos)}" class="table-warning">
+                    <td colspan="4" class="text-center">Нет зарегистрированных преподавателей</td>
+                </tr>
+
                 </tbody>
             </table>
         </div>

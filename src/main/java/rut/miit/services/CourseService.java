@@ -11,7 +11,5 @@ public interface CourseService {
 
     List<ShowCourseDto> allCourses();
 
-    List<ShowCourseDto> allTeacherCourses(String teacherName);
-
-    void removeCourse(String courseName);
+    void removeCourse(String id);
 }

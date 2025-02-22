@@ -2,8 +2,16 @@ package rut.miit.dto;
 
 public class ShowCourseDto {
 
+    private String id;
     private String courseName;
     private String teacherName;
+
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCourseName() {
         return courseName;
