@@ -1,73 +1,134 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">РУТ МИИТ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeless.org/extras/spring-security">
+<nav class="navbar navbar-expand-lg glass-navbar" th:fragment="navbar" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);">
+    <div class="container">
+        <!-- Логотип с анимацией -->
+        <a class="navbar-brand fw-bold gradient-text" href="/" style="background: linear-gradient(45deg, #2563eb, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            <img th:src="@{/pic/MIIT.png}" src="/pic/MIIT.png" alt="РУТ МИИТ" style="height: 30px; vertical-align: middle;" />
+        </a>
+
+        <!-- Бургер-меню -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Dropdown для добавления данных -->
-                <li class="nav-item dropdown" sec:authorize="hasAnyRole('ADMIN','MODERATOR')">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="addDataDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Добавление данных
+
+        <!-- Основное меню -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto align-items-lg-center">
+                <!-- Выпадающее меню "Добавление" -->
+                <li class="nav-item dropdown mx-2" sec:authorize="hasAnyRole('ADMIN','MODERATOR')">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center text-dark hover-accent" href="#" role="button"
+                       data-bs-toggle="dropdown" style="transition: all 0.3s ease;">
+                        <i class="bi bi-plus-circle me-2"></i>Добавить
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-lg-end border-0 shadow-lg" style="min-width: 220px;">
                         <li sec:authorize="hasRole('ADMIN')">
-                            <a class="dropdown-item" href="/teachers/add">Добавить Преподавателя</a>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/teachers/add">
+                                <i class="bi bi-person-plus me-3"></i>Преподавателя
+                            </a>
                         </li>
-
                         <li sec:authorize="hasRole('ADMIN')">
-                            <a class="dropdown-item" href="/courses/add">Добавить Дисциплину</a>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/courses/add">
+                                <i class="bi bi-journal-plus me-3"></i>Дисциплину
+                            </a>
                         </li>
-
                         <li sec:authorize="hasRole('ADMIN')">
-                            <a class="dropdown-item" href="/lessons/add">Добавить Занятие</a>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/lessons/add">
+                                <i class="bi bi-calendar-plus me-3"></i>Занятие
+                            </a>
                         </li>
                     </ul>
                 </li>
 
-                <!-- Dropdown для просмотра данных -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="viewDataDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Просмотр данных
+                <!-- Выпадающее меню "Просмотр" -->
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center text-dark hover-accent" href="#" role="button"
+                       data-bs-toggle="dropdown" style="transition: all 0.3s ease;">
+                        <i class="bi bi-eye me-2"></i>Просмотр
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-lg-end border-0 shadow-lg" style="min-width: 220px;">
                         <li>
-                            <a class="dropdown-item" href="/teachers/all">Cписок Преподавателей</a>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/teachers/all">
+                                <i class="bi bi-people me-3"></i>Преподаватели
+                            </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/courses/all">Список Дисциплин</a>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/courses/all">
+                                <i class="bi bi-journal-text me-3"></i>Дисциплины
+                            </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/lessons/all">Расписание Занятий</a>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/lessons/all">
+                                <i class="bi bi-calendar-week me-3"></i>Расписание
+                            </a>
                         </li>
                     </ul>
                 </li>
             </ul>
 
-            <!-- Правая часть навбара -->
-            <ul class="navbar-nav ms-auto">
-                
-                <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link text-info" href="/users/profile">
-                        <th:block sec:authentication="name"></th:block>
+            <!-- Правая часть: управление аккаунтом -->
+            <div class="d-flex align-items-center ms-lg-auto">
+                <div class="nav-item dropdown" sec:authorize="isAuthenticated()">
+                    <a class="nav-link d-flex align-items-center text-dark hover-accent" href="#" role="button"
+                       data-bs-toggle="dropdown" style="transition: all 0.3s ease;">
+                        <i class="bi bi-person-circle me-2"></i>
+                        <span class="me-2" sec:authentication="name"></span>
                     </a>
-                </li>
-                <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <form th:method="post" th:action="@{/users/logout}">
-                        <input class="btn btn-link nav-link text-light" type="submit" value="Выйти">
-                    </form>
-                </li>
-                <li class="nav-item" sec:authorize="!isAuthenticated()">
-                    <a class="nav-link text-light" th:href="@{/users/register}">Регистрация</a>
-                </li>
-                <li class="nav-item" sec:authorize="!isAuthenticated()">
-                    <a class="nav-link text-light" th:href="@{/users/login}">Авторизация</a>
-                </li>
-            </ul>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg">
+                        <li>
+                            <a class="dropdown-item py-3 d-flex align-items-center" href="/users/profile">
+                                <i class="bi bi-gear me-3"></i>Профиль
+                            </a>
+                        </li>
+                        <li>
+                            <form th:method="post" th:action="@{/users/logout}">
+                                <button class="dropdown-item py-3 d-flex align-items-center" type="submit">
+                                    <i class="bi bi-box-arrow-right me-3"></i>Выйти
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Гости -->
+                <div sec:authorize="!isAuthenticated()" class="d-flex gap-3">
+                    <a class="btn btn-outline-dark rounded-pill px-4" th:href="@{/users/register}">
+                        Регистрация
+                    </a>
+                    <a class="btn btn-dark rounded-pill px-4" th:href="@{/users/login}">
+                        Войти
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+
+<!-- Подключение Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    .hover-accent:hover {
+        color: #4f46e5 !important;
+    }
+
+    .dropdown-item {
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-item:hover {
+        background: #f8f9fa;
+        padding-left: 1.5rem;
+    }
+
+    .glass-navbar {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .gradient-text {
+        font-weight: 600;
+        letter-spacing: -0.5px;
+    }
+</style>
+</html>

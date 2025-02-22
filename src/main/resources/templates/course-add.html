@@ -33,7 +33,7 @@
                                 name="teacher" required>
                             <option value="">Выберите преподавателя</option>
                             <option th:each="t : ${availableTeachers}"
-                                    th:value="${t.teacherNumber}"
+                                    th:value="${t.teacherName}"
                                     th:text="${t.teacherName}">Имя преподавателя
                             </option>
                         </select>

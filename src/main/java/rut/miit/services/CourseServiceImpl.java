@@ -30,13 +30,14 @@ public class CourseServiceImpl implements CourseService {
         this.mapper = mapper;
     }
 
+    @Transactional
     @CacheEvict(cacheNames = "courses", allEntries = true)
     public void addCourse(AddCourseDto addCourseDto) {
         Course course = mapper.map(addCourseDto, Course.class);
         course.setTeacher(teacherRepository.findByTeacherName(addCourseDto.getTeacherName()).orElse(null));
         courseRepository.saveAndFlush(course);
     }
-        @Cacheable("courses")
+       @Cacheable("courses")
         public List<ShowCourseDto> allCourses() {
             return courseRepository.findAll().stream().map(course -> mapper.map(course, ShowCourseDto.class))
                     .collect(Collectors.toList());
@@ -47,7 +48,7 @@ public class CourseServiceImpl implements CourseService {
                     .collect(Collectors.toList());
         }
 
-        @CacheEvict(cacheNames = "courses", allEntries = true)
+       @CacheEvict(cacheNames = "courses", allEntries = true)
         public void removeCourse(String courseName) {
             courseRepository.deleteByCourseName(courseName);
         }

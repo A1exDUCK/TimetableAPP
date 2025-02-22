@@ -5,6 +5,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import rut.miit.dto.AddTeacherDto;
 import rut.miit.dto.ShowTeacherDto;
 import rut.miit.models.entities.Teacher;
@@ -25,18 +26,19 @@ public class TeacherServiceImpl implements TeacherService {
         this.mapper = mapper;
     }
 
+    @Transactional
     @CacheEvict(cacheNames = "teachers", allEntries = true)
     public void addTeacher(AddTeacherDto addTeacherDto) {
         teacherRepository.saveAndFlush(mapper.map(addTeacherDto, Teacher.class));
     }
 
-    @Cacheable("teachers")
+   @Cacheable("teachers")
     public List<ShowTeacherDto> allTeachers() {
         return teacherRepository.findAll().stream().map(teacher -> mapper.map(teacher, ShowTeacherDto.class))
                 .collect(Collectors.toList());
     }
 
-    @CacheEvict(cacheNames = "teachers", allEntries = true)
+   @CacheEvict(cacheNames = "teachers", allEntries = true)
     public void removeTeacher(String teacherNumber) {
         teacherRepository.deleteByTeacherNumber(teacherNumber);
     }

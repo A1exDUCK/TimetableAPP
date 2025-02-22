@@ -52,11 +52,11 @@ public class CourseController {
 
     @GetMapping("/all")
     public String showAllCourses(Model model) {
-        model.addAttribute("lessonsInfos", courseService.allCourses());
+        model.addAttribute("coursesInfos", courseService.allCourses());
         return "courses-all";
     }
 
-    @GetMapping("/lesson-delete/{course-name}")
+    @GetMapping("/course-delete/{course-name}")
     public String deleteCourse(
             @PathVariable("course-name") String courseName) {
         courseService.removeCourse(courseName);

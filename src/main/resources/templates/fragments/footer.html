@@ -1,5 +1,26 @@
-<footer id="footer" class="footer mt-auto bg-light bg-opacity-75 py-2" th:fragment="footer" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        /* Стили для футера, аналогичные навбару */
+        .glass-footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.05); /* Добавляем верхнюю границу для стиля */
+        }
+
+        /* Убедимся, что текст внутри футера виден на светлом фоне */
+        .glass-footer .text-center {
+            color: #333; /* Темно-серый цвет текста */
+        }
+    </style>
+</head>
+<body>
+<footer id="footer" class="footer glass-footer custom-footer mt-auto py-3" th:fragment="footer">
     <div class="container">
-        <div class="text-muted text-center small">&copy; BlackCoffeeCoding Team 2024. All rights reserved.</div>
+        <div class="text-center small">© BlackCoffeeCoding Team 2024. All rights reserved.</div>
     </div>
 </footer>
+</body>
+</html>

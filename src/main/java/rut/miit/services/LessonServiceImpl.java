@@ -24,6 +24,7 @@ public class LessonServiceImpl implements LessonService {
         this.mapper = mapper;
     }
 
+    @Transactional
     @Override
     public void addLesson(AddLessonDto addLessonDto) {
         lessonRepository.saveAndFlush(mapper.map(addLessonDto, Lesson.class));

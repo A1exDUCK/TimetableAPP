@@ -3,6 +3,7 @@ package rut.miit.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import rut.miit.models.entities.Course;
@@ -16,6 +17,19 @@ public interface CourseRepository extends JpaRepository<Course, String> {
 
     @Query("SELECT с FROM Course с JOIN с.teacher t WHERE t.teacherName=:teacherName ORDER BY t.teacherName ASC")
     List<Course> findAllWhatTeacherTeaches(String teacherName);
+
+    @Query("SELECT c FROM Course c WHERE c.courseName = :courseName AND c.teacher.teacherName = :teacherName")
+    Optional<Course> findByCourseNameAndTeacherName(
+            @Param("courseName") String courseName,
+            @Param("teacherName") String teacherName
+    );
+
+    @Query("SELECT c FROM Course c WHERE c.courseName = :courseName AND c.teacher.teacherName = :teacherName AND c.id != :id")
+    Optional<Course> findByCourseNameAndTeacherNameExcludingId(
+            @Param("courseName") String courseName,
+            @Param("teacherName") String teacherName,
+            @Param("id") String id
+    );
 
     @Modifying
     @Transactional
