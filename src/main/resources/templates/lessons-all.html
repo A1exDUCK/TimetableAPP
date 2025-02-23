@@ -16,16 +16,18 @@
                     <th>Аудитория</th>
                     <th>Группа</th>
                     <th>Курс</th>
+                    <th>Преподаватель</th> <!-- Новая колонка -->
                     <th>Действия</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="l : ${lessonsInfos}">
-                    <td th:text="${#dates.format(l.date, 'dd.MM.yyyy')}">Дата</td>
+                    <td th:text="${#temporals.format(l.date, 'dd.MM.yyyy')}">Дата</td>
                     <td th:text="${l.selectedPair}">Пара</td>
                     <td th:text="${l.classroom}">Аудитория</td>
                     <td th:text="${l.studentGroup}">Группа</td>
                     <td th:text="${l.courseName}">Курс</td>
+                    <td th:text="${l.teacherName}">Преподаватель</td>
                     <td>
                         <a th:href="@{/lessons/lesson-delete/{id}(id=${l.id})}"
                            class="btn btn-sm btn-danger"
@@ -36,7 +38,7 @@
                 </tr>
 
                 <tr th:if="${#lists.isEmpty(lessonsInfos)}" class="table-warning">
-                    <td colspan="6" class="text-center">Нет назначенных занятий</td>
+                    <td colspan="7" class="text-center">Нет назначенных занятий</td>
                 </tr>
                 </tbody>
             </table>

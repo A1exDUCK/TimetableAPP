@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="Lesson add view now working,but database is not writing">
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="Lesson add now work correct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowLessonDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Lesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.docker: Compose Deployment.executor": "Run",
+    "Docker.elastic.elasticsearch: Compose Deployment.executor": "Run",
     "Docker.elastic: Compose Deployment.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -133,10 +133,24 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="elastic.elasticsearch: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="elasticsearch" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/elastic/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.UniversityApplication" />
         <item itemvalue="Docker.elastic: Compose Deployment" />
+        <item itemvalue="Docker.elastic.elasticsearch: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +179,7 @@
       <workItem from="1739896382728" duration="4717000" />
       <workItem from="1739959553627" duration="3303000" />
       <workItem from="1740226500648" duration="16939000" />
-      <workItem from="1740297025930" duration="12515000" />
+      <workItem from="1740297025930" duration="14266000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -311,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740306008458</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Lesson add now work correct">
+      <option name="closed" value="true" />
+      <created>1740312003831</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1740312003831</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +361,8 @@
     <MESSAGE value="fix view of navbar,footer on all html,courses all now working,but delete by courseName" />
     <MESSAGE value="delete course now working" />
     <MESSAGE value="Lesson add view now working,but database is not writing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson add view now working,but database is not writing" />
+    <MESSAGE value="Lesson add now work correct" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson add now work correct" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

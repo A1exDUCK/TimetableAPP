@@ -57,8 +57,7 @@ public class LessonController {
     }
 
     @GetMapping("/lesson-delete/{id}")
-    public String deleteLesson(
-            @PathVariable("id") String id) {
+    public String deleteLesson(@PathVariable("id") String id) {
         lessonService.removeLesson(id);
         return "redirect:/lessons/all";
     }

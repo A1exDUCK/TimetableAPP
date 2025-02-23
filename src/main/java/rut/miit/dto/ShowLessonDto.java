@@ -3,6 +3,7 @@ package rut.miit.dto;
 import java.time.LocalDate;
 
 public class ShowLessonDto {
+    private String id;
     private String studentGroup;
     private LocalDate date;
     private String selectedPair;
@@ -10,6 +11,12 @@ public class ShowLessonDto {
     private String courseName;
     private String teacherName;
 
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
     public LocalDate getDate() {
         return date;
     }
