@@ -8,6 +8,7 @@ import jakarta.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public abstract class BaseEntity {
+
     private String id;
 
     @Id
@@ -15,7 +16,6 @@ public abstract class BaseEntity {
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }

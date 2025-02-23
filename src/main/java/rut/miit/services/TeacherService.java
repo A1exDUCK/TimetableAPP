@@ -6,6 +6,7 @@ import rut.miit.dto.ShowTeacherDto;
 import java.util.List;
 
 public interface TeacherService {
+
     void addTeacher(AddTeacherDto addTeacherDto);
 
     List<ShowTeacherDto> allTeachers();

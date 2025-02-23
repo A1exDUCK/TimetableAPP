@@ -11,8 +11,6 @@ import rut.miit.models.entities.Teacher;
 import rut.miit.repositories.CourseRepository;
 import rut.miit.repositories.LessonRepository;
 
-
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,8 +24,6 @@ public class LessonServiceImpl implements LessonService {
     public LessonServiceImpl(LessonRepository lessonRepository,CourseRepository courseRepository, ModelMapper mapper) {
         this.lessonRepository = lessonRepository;
         this.courseRepository = courseRepository;
-
-
         this.mapper = mapper;
     }
 
@@ -35,13 +31,10 @@ public class LessonServiceImpl implements LessonService {
     public void addLesson(AddLessonDto addLessonDto) {
         Lesson lesson = mapper.map(addLessonDto, Lesson.class);
 
-        // Получаем связанные сущности
-        Course course = courseRepository.findById(addLessonDto.getCourseName())
-                .orElseThrow((null));
+        Course course = courseRepository.findById(addLessonDto.getCourseName()).orElseThrow((null));
 
         Teacher teacher = course.getTeacher();
 
-        // Устанавливаем связи
         lesson.setCourse(course);
         lesson.setTeacher(teacher);
 
@@ -59,5 +52,4 @@ public class LessonServiceImpl implements LessonService {
     public void removeLesson(String id) {
         lessonRepository.deleteById(id);
     }
-
 }

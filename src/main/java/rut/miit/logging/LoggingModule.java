@@ -12,9 +12,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 @Aspect
 @Component
-public class LoggingUnite {
+public class LoggingModule {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoggingUnite.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoggingModule.class);
 
     @Pointcut("within(@org.springframework.web.bind.annotation.RestController *) || within(rut.miit.web..*)")
     public void controller() {}
@@ -30,7 +30,7 @@ public class LoggingUnite {
 
         Object result = joinPoint.proceed();
         logger.info("Response: [status={}, body={}]",
-                HttpServletResponse.SC_OK,  // или получите реальный статус ответа
+                HttpServletResponse.SC_OK,
                 result);
 
         return result;

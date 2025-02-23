@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 @UniqueLessonConstraint
 public class AddLessonDto {
+
     private String studentGroup;
     private LocalDate date;
     private String selectedPair;
@@ -47,11 +48,6 @@ public class AddLessonDto {
         this.courseName = courseName;
     }
 
-
     public String getTeacherName() {return teacherName;}
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
-    }
-
-
+    public void setTeacherName(String teacherName) {this.teacherName = teacherName;}
 }

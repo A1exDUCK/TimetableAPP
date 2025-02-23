@@ -14,9 +14,8 @@ public class Course extends rut.miit.models.entities.BaseEntity {
     private String courseName;
 
     private Set<Lesson> lessons;
-    public Course() {
-        lessons = new HashSet<>();
-    }
+
+    public Course() {lessons = new HashSet<>();}
     
     @ManyToOne
     private Teacher teacher;

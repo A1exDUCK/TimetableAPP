@@ -6,6 +6,7 @@ import rut.miit.dto.ShowLessonDto;
 import java.util.List;
 
 public interface LessonService {
+
     void addLesson(AddLessonDto addLessonDto);
 
     List<ShowLessonDto> allLessons();

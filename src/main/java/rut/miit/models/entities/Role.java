@@ -6,15 +6,14 @@ import rut.miit.models.enums.UserRoles;
 @Entity
 @Table(name = "roles")
 public class Role extends BaseEntity {
+
     private UserRoles name;
 
     public Role(UserRoles name) {
         this.name = name;
     }
 
-    public Role() {
-
-    }
+    public Role() {}
 
     @Enumerated(EnumType.STRING)
     @Column(unique = true)

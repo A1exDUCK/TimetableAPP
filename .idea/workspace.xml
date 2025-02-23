@@ -7,22 +7,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="All views are working!">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="Add an error 404,403,500 views.SecurityChain now complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/config/AppSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/AppSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/AppUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AppUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/config/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/config/InterceptorConfigurator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddCourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddCourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddLessonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddTeacherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/AddTeacherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowCourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowCourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowLessonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowTeacherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowTeacherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/UserRegistrationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/logging/LoggingUnite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/logging/LoggingModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Lesson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/models/enums/UserRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/models/enums/UserRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/UserRoleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/views/UserProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/views/UserProfileView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +105,7 @@
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/lehas/Desktop/University/src/main/java/rut/miit/Main.java",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -193,7 +210,7 @@
       <workItem from="1739896382728" duration="4717000" />
       <workItem from="1739959553627" duration="3303000" />
       <workItem from="1740226500648" duration="16939000" />
-      <workItem from="1740297025930" duration="21216000" />
+      <workItem from="1740297025930" duration="25992000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -355,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740313561007</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add an error 404,403,500 views.SecurityChain now complete">
+      <option name="closed" value="true" />
+      <created>1740322611412</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1740322611412</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +388,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base project created" />
@@ -385,27 +421,19 @@
     <MESSAGE value="Lesson add view now working,but database is not writing" />
     <MESSAGE value="Lesson add now work correct" />
     <MESSAGE value="All views are working!" />
-    <option name="LAST_COMMIT_MESSAGE" value="All views are working!" />
+    <MESSAGE value="Add an error 404,403,500 views.SecurityChain now complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add an error 404,403,500 views.SecurityChain now complete" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java</url>
-          <line>34</line>
-          <properties class="rut.miit.services.LessonServiceImpl" method="addLesson">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[0]).getKey()" custom="org.springframework.validation.support.BindingAwareModelMap,java.util.LinkedHashMap.Entry" />
         <watch expression="((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[0]).getKey()" custom="org.springframework.validation.support.BindingAwareModelMap,java.util.LinkedHashMap.Entry" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
