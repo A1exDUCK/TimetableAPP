@@ -88,10 +88,10 @@
                                 class="form-select text-center"
                                 id="course"
                                 required>
-                            <option value="">Выберите курс</option>
+                            <option value="">Выберите дисциплину</option>
                             <option th:each="c : ${availableCourses}"
                                     th:value="${c.id}"
-                                    th:text="${c.courseName}"></option>
+                                    th:text="${c.courseName + ' (' + c.teacherName + ')'}"></option>
                         </select>
                         <small th:if="${#fields.hasErrors('courseName')}"
                                th:errors="*{courseName}"

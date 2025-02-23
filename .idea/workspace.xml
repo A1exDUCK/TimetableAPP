@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="Lesson add now work correct">
+    <list default="true" id="76c8cfe2-6d47-4d6f-83e1-6ce3906410a4" name="Changes" comment="All views are working!">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowLessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/dto/ShowLessonDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/config/AppSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/config/AppSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/repositories/LessonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/AppUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AppUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rut/miit/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rut/miit/web/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lesson-add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lessons-all.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +87,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/lehas/Desktop/University/src/main/java/rut/miit/Main.java",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   },
@@ -179,7 +193,7 @@
       <workItem from="1739896382728" duration="4717000" />
       <workItem from="1739959553627" duration="3303000" />
       <workItem from="1740226500648" duration="16939000" />
-      <workItem from="1740297025930" duration="14266000" />
+      <workItem from="1740297025930" duration="21216000" />
     </task>
     <task id="LOCAL-00001" summary="Base project created">
       <option name="closed" value="true" />
@@ -333,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740312003831</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="All views are working!">
+      <option name="closed" value="true" />
+      <created>1740313561007</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1740313561007</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,20 +384,12 @@
     <MESSAGE value="delete course now working" />
     <MESSAGE value="Lesson add view now working,but database is not writing" />
     <MESSAGE value="Lesson add now work correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson add now work correct" />
+    <MESSAGE value="All views are working!" />
+    <option name="LAST_COMMIT_MESSAGE" value="All views are working!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/rut/miit/web/LessonController.java</url>
-          <line>39</line>
-          <properties class="rut.miit.web.LessonController" method="addLesson">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/rut/miit/services/LessonServiceImpl.java</url>
           <line>34</line>

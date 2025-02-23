@@ -15,9 +15,9 @@ import java.util.Optional;
 public class AuthServiceImpl implements AuthService {
 
 
-    private UserRepository userRepository;
-    private UserRoleRepository userRoleRepository;
-    private PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
+    private final UserRoleRepository userRoleRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public AuthServiceImpl(UserRepository userRepository, UserRoleRepository userRoleRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;

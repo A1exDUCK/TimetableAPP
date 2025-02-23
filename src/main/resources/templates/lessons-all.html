@@ -15,7 +15,7 @@
                     <th>Пара</th>
                     <th>Аудитория</th>
                     <th>Группа</th>
-                    <th>Курс</th>
+                    <th>Дисциплина</th>
                     <th>Преподаватель</th> <!-- Новая колонка -->
                     <th>Действия</th>
                 </tr>
@@ -26,7 +26,7 @@
                     <td th:text="${l.selectedPair}">Пара</td>
                     <td th:text="${l.classroom}">Аудитория</td>
                     <td th:text="${l.studentGroup}">Группа</td>
-                    <td th:text="${l.courseName}">Курс</td>
+                    <td th:text="${l.courseName}">Дисциплина</td>
                     <td th:text="${l.teacherName}">Преподаватель</td>
                     <td>
                         <a th:href="@{/lessons/lesson-delete/{id}(id=${l.id})}"

@@ -15,12 +15,11 @@ import org.springframework.security.web.context.RequestAttributeSecurityContextR
 import org.springframework.security.web.context.SecurityContextRepository;
 import rut.miit.models.enums.UserRoles;
 import rut.miit.repositories.UserRepository;
-import rut.miit.services.AppUserDetailsService;
 import rut.miit.services.AppUserDetailsServiceImpl;
 
 @Configuration
 public class AppSecurityConfiguration {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public AppSecurityConfiguration(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -36,10 +35,10 @@ public class AppSecurityConfiguration {
                                         .permitAll().
                                         requestMatchers(PathRequest.toStaticResources().atCommonLocations())
                                         .permitAll().
-                                        requestMatchers("/", "/users/login", "/users/register", "/users/login-error","/specialities/all","/specialities/speciality-contest/{speciality-code}").permitAll().
-                                        requestMatchers("/users/profile").authenticated().
-                                        requestMatchers("/applicants/add","/applicants/all", "/applicants/applicant-delete/","/exams/add","/exams/exam-delete/","/exams/all","/exams/exam-members/").hasAnyRole(UserRoles.MODERATOR.name(),UserRoles.ADMIN.name()).
-                                        requestMatchers("/specialities/add","/specialities/speciality-delete/").hasRole(UserRoles.ADMIN.name()).
+                                        requestMatchers("/", "/users/login", "/users/register", "/users/login-error","/teachers/all","/lessons/all").permitAll().
+                                        requestMatchers("/users/profile","courses/all").authenticated().
+                                        requestMatchers("/lessons/add", "/lessons/lesson-delete/").hasAnyRole(UserRoles.MODERATOR.name(),UserRoles.ADMIN.name()).
+                                        requestMatchers("/teachers/add","/teachers/teacher-delete/","courses/add").hasRole(UserRoles.ADMIN.name()).
                                         anyRequest().authenticated()
                 )
                 .formLogin(

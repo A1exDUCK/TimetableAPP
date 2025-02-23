@@ -8,9 +8,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import rut.miit.models.entities.Lesson;
 import java.time.LocalDate;
+import java.util.List;
 
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson, String> {
+
+    List<Lesson> findAllByOrderByDateAsc();
 
     boolean existsByDateAndSelectedPairAndClassroom(
             LocalDate date,

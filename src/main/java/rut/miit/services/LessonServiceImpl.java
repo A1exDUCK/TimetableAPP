@@ -10,7 +10,7 @@ import rut.miit.models.entities.Lesson;
 import rut.miit.models.entities.Teacher;
 import rut.miit.repositories.CourseRepository;
 import rut.miit.repositories.LessonRepository;
-import rut.miit.repositories.TeacherRepository;
+
 
 
 import java.util.List;
@@ -50,7 +50,7 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     public List<ShowLessonDto> allLessons() {
-        return lessonRepository.findAll().stream().map(lesson -> mapper.map(lesson, ShowLessonDto.class))
+        return lessonRepository.findAllByOrderByDateAsc().stream().map(lesson -> mapper.map(lesson, ShowLessonDto.class))
                 .collect(Collectors.toList());
     }
 
