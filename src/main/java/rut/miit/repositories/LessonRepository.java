@@ -20,10 +20,6 @@ public interface LessonRepository extends JpaRepository<Lesson, String> {
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM Lesson WHERE date = :date AND selectedPair = :selectedPair AND classroom = :classroom")
-    void deleteByDateAndSelectedPairAndClassroom(
-            @Param("date") LocalDate date,
-            @Param("selectedPair") String selectedPair,
-            @Param("classroom") String classroom
-    );
+    @Query("DELETE FROM Lesson l WHERE l.id = :id")
+    void deleteById(@Param("id") String id);
 }

@@ -1,9 +1,8 @@
 package rut.miit.web;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import jakarta.validation.Valid;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,23 +10,24 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import rut.miit.dto.AddLessonDto;
 import rut.miit.services.LessonService;
-
-import java.time.LocalDate;
+import rut.miit.services.CourseService;
 
 
 @Controller
 @RequestMapping("/lessons")
 public class LessonController {
 
-    @Autowired
     private final LessonService lessonService;
+    private final CourseService courseService;
 
-    public LessonController(LessonService lessonService) {
+    public LessonController(LessonService lessonService, CourseService courseService) {
         this.lessonService = lessonService;
+        this.courseService = courseService;
     }
 
     @GetMapping("/add")
-    public String addLesson() {
+    public String addLesson(Model model) {
+        model.addAttribute("availableCourses", courseService.allCourses());
         return "lesson-add";
     }
 
@@ -56,13 +56,12 @@ public class LessonController {
         return "lessons-all";
     }
 
-    @GetMapping("/lesson-delete/{date}/{selectedPair}/{classroom}")
+    @GetMapping("/lesson-delete/{id}")
     public String deleteLesson(
-            @PathVariable("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
-            @PathVariable("selectedPair") String selectedPair,
-            @PathVariable("classroom") String classroom
-    ) {
-        lessonService.removeLesson(date, selectedPair, classroom);
+            @PathVariable("id") String id) {
+        lessonService.removeLesson(id);
         return "redirect:/lessons/all";
     }
+
+
 }

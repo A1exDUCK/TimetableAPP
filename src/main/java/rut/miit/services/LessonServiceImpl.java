@@ -9,7 +9,6 @@ import rut.miit.models.entities.Lesson;
 import rut.miit.repositories.LessonRepository;
 
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,8 +37,8 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     @Transactional
-    public void removeLesson(LocalDate date, String selectedPair, String classroom) {
-        lessonRepository.deleteByDateAndSelectedPairAndClassroom(date, selectedPair, classroom);
+    public void removeLesson(String id) {
+        lessonRepository.deleteById(id);
     }
 
 }

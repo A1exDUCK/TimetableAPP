@@ -61,10 +61,10 @@ public class CourseController {
         return "courses-all";
     }
 
-    @GetMapping("/course-delete/{course-name}")
+    @GetMapping("/course-delete/{id}")
     public String deleteCourse(
-            @PathVariable("course-name") String courseName) {
-        courseService.removeCourse(courseName);
+            @PathVariable("id") String id) {
+        courseService.removeCourse(id);
         return "redirect:/courses/all";
     }
 }
