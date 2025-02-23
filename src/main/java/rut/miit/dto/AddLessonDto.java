@@ -47,7 +47,7 @@ public class AddLessonDto {
         this.courseName = courseName;
     }
 
-    @NotEmpty(message = "Имя преподавателя обязательно!")
+
     public String getTeacherName() {return teacherName;}
     public void setTeacherName(String teacherName) {
         this.teacherName = teacherName;

@@ -7,28 +7,39 @@
 <main class="flex-shrink-0">
     <div class="container my-5">
         <h2 class="text-center text-dark">Назначенные Занятия</h2>
-        <div class="row">
-            <div th:each="l : ${lessonsInfos}" class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title" th:text="'Дата: ' + ${#dates.format(l.date, 'dd.MM.yyyy')}"></h5>
-                        <p class="card-text" th:text="'Пара: ' + ${l.selectedPair}"></p>
-                        <p class="card-text" th:text="'Аудитория: ' + ${l.classroom}"></p>
-                        <p class="card-text" th:text="'Группа: ' + ${l.studentGroup}"></p>
-                        <p class="card-text" th:text="'Курс: ' + ${l.courseName}"></p>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Дата</th>
+                    <th>Пара</th>
+                    <th>Аудитория</th>
+                    <th>Группа</th>
+                    <th>Курс</th>
+                    <th>Действия</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l : ${lessonsInfos}">
+                    <td th:text="${#dates.format(l.date, 'dd.MM.yyyy')}">Дата</td>
+                    <td th:text="${l.selectedPair}">Пара</td>
+                    <td th:text="${l.classroom}">Аудитория</td>
+                    <td th:text="${l.studentGroup}">Группа</td>
+                    <td th:text="${l.courseName}">Курс</td>
+                    <td>
+                        <a th:href="@{/lessons/lesson-delete/{id}(id=${l.id})}"
+                           class="btn btn-sm btn-danger"
+                           sec:authorize="hasAnyRole('ADMIN', 'MODERATOR')">
+                            Удалить
+                        </a>
+                    </td>
+                </tr>
 
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a th:href="@{/lessons/lesson-delete/{date}/{pair}/{room}(date=${lesson.date}, pair=${lesson.selectedPair}, room=${lesson.classroom})}"
-                                   class="btn btn-sm btn-danger"
-                                   sec:authorize="hasAnyRole('ADMIN', 'MODERATOR')">
-                                    Удалить
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <tr th:if="${#lists.isEmpty(lessonsInfos)}" class="table-warning">
+                    <td colspan="6" class="text-center">Нет назначенных занятий</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </main>

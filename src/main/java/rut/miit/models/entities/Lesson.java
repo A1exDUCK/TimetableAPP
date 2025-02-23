@@ -18,6 +18,9 @@ public class Lesson extends BaseEntity {
     @ManyToOne
     private Course course;
 
+    @ManyToOne
+    private Teacher teacher;
+
     @Column(unique = false,nullable = true)
     public String getStudentGroup() {return studentGroup;}
     public void setStudentGroup(String studentGroup) {
@@ -46,5 +49,10 @@ public class Lesson extends BaseEntity {
     @ManyToOne
     public Course getCourse() {return course;}
     public void setCourse(Course courseName) {this.course = courseName;}
+
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @ManyToOne
+    public Teacher getTeacher() {return teacher;}
+    public void setTeacher(Teacher teacherName) {this.teacher = teacherName;}
 
 }

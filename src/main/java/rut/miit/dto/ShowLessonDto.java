@@ -8,6 +8,7 @@ public class ShowLessonDto {
     private String selectedPair;
     private String classroom;
     private String courseName;
+    private String teacherName;
 
     public LocalDate getDate() {
         return date;
@@ -36,5 +37,10 @@ public class ShowLessonDto {
     public String getCourseName() {return courseName;}
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+
+    public String getTeacherName() {return teacherName;}
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 }

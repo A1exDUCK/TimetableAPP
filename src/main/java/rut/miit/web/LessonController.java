@@ -63,5 +63,4 @@ public class LessonController {
         return "redirect:/lessons/all";
     }
 
-
 }
